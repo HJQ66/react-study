@@ -1,0 +1,13 @@
+.ipt_task{
+    margin: 0;
+    width: 430px;
+    height: 30px;
+    border: 1px solid #eee;
+    outline: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.ipt_task:focus{
+    border-color: aqua;
+    box-shadow: 0 0 5px rgb(196, 231, 231);
+}

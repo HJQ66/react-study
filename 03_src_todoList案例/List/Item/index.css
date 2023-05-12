@@ -1,0 +1,17 @@
+.task_item{
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.task_item span{
+    font-size: 14px;
+}
+.btn_del{
+    float: right;
+    background-color: #e35c46;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

@@ -1,0 +1,18 @@
+footer{
+    margin-top: 20px;
+    padding-left: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.ipt_check{
+    margin-right: 20px;
+}
+.clear_btn{
+    float: right;
+    background-color: #e35c46;
+    color: white;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 5px;
+}
