@@ -1,0 +1,20 @@
+.list_box{
+    width: 100%;
+    margin: 0 auto;
+}
+.list_box .item{
+    width: 25%;
+    height: 150px;
+    border: 1px solid #eee;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 15px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+
+}
+.list_box .item img{
+    width: 35%;
+}
