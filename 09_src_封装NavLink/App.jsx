@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Header from './components/Header'
-import { Route,Switch,Redirect } from 'react-router-dom/cjs/react-router-dom.min'
+import { Route } from 'react-router-dom/cjs/react-router-dom.min'
 
 import Home from './pages/Home'
 import About from './pages/About'
@@ -20,13 +20,8 @@ export default class App extends Component {
             <MyNavLink to='/home'>Home</MyNavLink>
           </div>
           <div className='content'>
-            {/* Switch组件作用：将路由组件进行单一匹配，如果匹配到该路由组件就不再往下执行，提高效率 */}
-            <Switch>
-                <Route  path='/home' component={Home}></Route>
-                <Route  path='/about' component={About}></Route>
-                {/* 路由重定向到home，当都不匹配时跳到home */}
-                <Redirect to='/home'/>
-            </Switch>
+           <Route path='/home' component={Home}></Route>
+           <Route path='/about' component={About}></Route>
           </div>
         </main>
       </div>
