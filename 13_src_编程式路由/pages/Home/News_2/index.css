@@ -1,0 +1,8 @@
+.news2_container .news2_item{
+    color: blueviolet;
+    cursor: pointer;
+    margin: 5px;
+}
+.news2_container{
+    padding: 0;
+}

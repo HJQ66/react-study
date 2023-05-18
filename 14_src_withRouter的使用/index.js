@@ -1,19 +1,13 @@
 import React from "react";
 import ReactDOM from 'react-dom/client';
-
-import { ConfigProvider } from 'antd'
 import App from "./App";
+import {BrowserRouter} from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
     <React.StrictMode>
-        {/* 配置自定义主题 */}
-        <ConfigProvider 
-          theme={{ 
-              token: { colorPrimary: "red", borderRadius: 3 } 
-          }}    
-          >
+      <BrowserRouter>
         <App />
-      </ConfigProvider>
+      </BrowserRouter>
     </React.StrictMode>
   );

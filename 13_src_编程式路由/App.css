@@ -1,0 +1,33 @@
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+.nav_container{
+    width: 170px;
+    height: 100px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.nav_container a{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+}
+.nav_container a:nth-child(1)
+{
+    border-bottom: 1px solid #eee;
+}
+.content{
+    width: 800px;
+    margin: 0px 0 0 30px;
+}
+main{
+    display: flex;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
