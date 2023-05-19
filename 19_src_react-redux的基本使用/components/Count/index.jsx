@@ -1,42 +1,37 @@
 import React, { Component } from 'react'
-import store from '../../redux/store'
-import { createIncrementAction,createDecrementAction,createIncrementAsyncAction } from "../../redux/count_actions";
+import store from '../../redux/store';
 
 export default class Count extends Component {
-
   componentDidMount(){
-    //检测redux中状态的变化，只要变化，就调用render
     store.subscribe(()=>{
       this.setState({})
     })
   }
   caculate = (type)=>{
     const {value} = this.getValue
+    const {count} = this.props
     //奇数加
     if(type==='oddIncrement'){
-      if(store.getState()%2!==0){
-        store.dispatch(createIncrementAction(value*1))
+      if(count%2 !== 0)
+        this.props.jia(value*1)
       }
-    }
     // 异步加
     if(type==='asyncIncrement'){
-      // setTimeout(()=>{
-        store.dispatch(createIncrementAsyncAction(value*1,500))
-      // },1000)
+      this.props.asyncJia(value*1,500)
     }
     // 加
     if(type==='increment'){
-      store.dispatch(createIncrementAction(value*1))
+      this.props.jia(value*1)
     }
     // 减
     if(type === 'decrement'){
-      store.dispatch(createDecrementAction(value*1))
+      this.props.jian(value*1)
     }
   }
   render() {
     return (
       <div>
-        <h1>当前求和为：{store.getState()}</h1>
+        <h1>当前求和为：{this.props.count}</h1>
         <select ref={c => this.getValue = c}>
           <option value="1">1</option>
           <option value="2">2</option>
